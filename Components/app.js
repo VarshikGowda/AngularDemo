@@ -160,24 +160,4 @@ app.controller('demoController', function ($scope, $timeout,$filter) {
         }
     }
 
-    $scope.DisplayFilter = function (userDetails) {
-        var w = $scope.names;
-
-        for (var q = 0; q <= $scope.names.length; q++) {
-            if (w[q] == userDetails.id)
-                return true;
-            else
-                return false;
-        }
-        return false;
-
-    }
-    //$scope.DisplayFilter11 = function () {
-    //    var search_term = "Austin"; // search term
-    //    var search = new RegExp(search_term, "i");
-    //    var arr = jQuery.grep(jsonData., function (text) {
-    //        return search.test(text);
-    //    });
-    //}
-  
 });
