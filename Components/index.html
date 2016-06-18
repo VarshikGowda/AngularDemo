@@ -51,23 +51,10 @@
 
                 <h2 class='header'>Find By Name</h2>
                 <selectize placeholder='Filter by Name' config="nameFilter" class='contacts' ng-model="names"></selectize>
-                <input type="button" value="Filter" ng-click="DisplayFilter11()" /> <input type="button" value="Clear" ng-click="ClearFilterValues()" />
+                
                 <br /> <br />
 
 
-            </div>
-            <div class="row">
-                <!--myName myConfig-->
-                <form name='myForm'>
-                    <h2 class='header'>Form Bindings</h2>
-                    <selectize placeholder='Filter by Name' options='myOptions' name='myName' config="myConfig" ng-model="myModel" ng-disabled='disable'></selectize>
-                    <!--<p>
-                        <b>ngModel:</b>
-                        <pre>{{myModel |json}}</pre>
-                        <b>myForm.$dirty:</b>
-                        <pre>{{myForm.$dirty | json}}</pre>
-                    </p>-->
-                </form>
             </div>
 
             <div class=" ng-cloak row" ng-repeat="item in selectedList" ng-if="$index % 4 == 0">
@@ -127,73 +114,7 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <h2 class='header'>Filtering</h2>
-                <input ng-model="search.text">
-                <br /><br />
-                <div class=" ng-cloak row" ng-repeat="item in myOptions | filter:search.text" ng-if="$index % 4 == 0">
-                    <div class="col-lg-3 col-md-6">
-                        <div ng-class="myOptions[$index].gender === 'F' ? 'rcornersGreen' : 'rcornersBlue' ">
-                            <div class=" panel-heading ">
-                                <div class=" row">
-                                    <div class="col-xs-9 text-left">
-                                        <div class="h3">{{myOptions[$index].text}}</div>
-                                        <div class="small"><b>E-Mail:</b>{{myOptions[$index].email}} </div>
-                                        <div class="small"><b>City:</b>{{myOptions[$index].city}} </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" ng-if="myOptions[$index+1]">
-                        <div ng-class="myOptions[$index + 1].gender === 'M' ? 'rcornersBlue' : 'rcornersGreen' ">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-9 text-left">
-                                        <div class="h3">{{myOptions[$index + 1].text}}</div>
-                                        <div class="small"><b>E-Mail:</b>{{myOptions[$index + 1].email}} </div>
-                                        <div class="small"><b>City:</b>{{myOptions[$index + 1].city}} </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" ng-if="myOptions[$index+2]">
-                        <div ng-class=" myOptions[$index + 2].gender === 'M' ? 'rcornersBlue' : 'rcornersGreen' ">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-9 text-left">
-                                        <div class="h3">{{myOptions[$index + 2].text}}</div>
-                                        <div class="small"><b>E-Mail:</b>{{myOptions[$index + 2].email}} </div>
-                                        <div class="small"><b>City:</b>{{myOptions[$index + 2].city}} </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" ng-if="myOptions[$index+3]">
-                        <div ng-class=" myOptions[$index + 3].gender === 'M' ? 'rcornersBlue' : 'rcornersGreen' ">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-9 text-left">
-                                        <div class="h3">{{myOptions[$index + 3].text}}</div>
-                                        <div class="small"><b>E-Mail:</b>{{myOptions[$index + 3].email}} </div>
-                                        <div class="small"><b>City:</b>{{myOptions[$index + 3].city}} </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-
-
-
     </div>
 
     <script src="http://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
